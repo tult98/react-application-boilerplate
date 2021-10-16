@@ -139,5 +139,8 @@ psd
 thumb
 sketch
 
+## Husky
+.husky/
+
 # End of https://www.toptal.com/developers/gitignore/api/node,react
 1
