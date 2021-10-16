@@ -1,10 +1,11 @@
-const webpack = require('webpack')
 const path = require('path')
 const EslintPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.jsx'),
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -26,8 +27,14 @@ module.exports = {
       directory: path.resolve(__dirname, './dist'),
     },
     compress: true,
-    port: 8000,
+    port: 3000,
     hot: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new EslintPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/index.html'),
+    }),
+    new EslintPlugin(),
+  ],
 }

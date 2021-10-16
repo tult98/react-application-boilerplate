@@ -5,6 +5,7 @@ const App = () => {
     <div>
       <h1>React application boilerplate</h1>
       <p>Hello nhe' </p>
+      <p>Version 2.1</p>
     </div>
   )
 }
