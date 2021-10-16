@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const EslintPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -28,5 +29,5 @@ module.exports = {
     port: 8000,
     hot: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [new webpack.HotModuleReplacementPlugin(), new EslintPlugin()],
 }
