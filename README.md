@@ -84,16 +84,14 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-This is a boilerplate react application that setup with full mordern like webpack, babel, eslint, prettier, git hooks and typescript. I create this repo as a reference for my own and saving my time from setup those tools from scratch each time I start a new project.
+This is a boilerplate react application that setup with full mordern like webpack, babel, eslint, prettier, git hooks and typescript. Below is the few things that I expected this repo to helping me out and hopefully for you guys.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Here's why :
+* Your time should be focused on creating something amazing. A project template that saving my time and yours.
+* I don't want to doing the same thing again and again each time I start a new project.
+* Able to quickly setup a frontend project that giving me and my team the best **EXPERIENCE** when coding.  
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -101,16 +99,16 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+The main dependencies and tools that being used in this repo
 
-* [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Webpack](https://webpack.js.org/)
+* [Babel](https://babeljs.io/)
+* [Typescript](https://www.typescriptlang.org/)
+* [Eslint](https://eslint.org/)
+* [Prettier](https://prettier.io/)
+* [Tailwindcss](https://tailwindcss.com/)
+* [Husky](https://typicode.github.io/husky/#/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -119,32 +117,34 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The final goal of this repo is to setup a react application from scratch that supported 2 mode which are development mode and production mode. 
+The common idea for 2 modes is:
+1. Using typescript.
+2. Using webpack as a module bundler all neccessary files such as `.ts, .tsx, .js, .jsx` and assets files like css, image, json, ... 
+Support hot reload, seperate configuration with each mode, clean up output folder after each build times, ...etc.
+4. Linting and formating code with eslint and prettier.
+
+#### For development mode
+
+The idea here is use babel to compile typescript code and newest Javascript syntax, features to ES5 which is supported by browsers. Babel will not do type checking which make its compile time much faster than normal `tsc` and that good for developers. Besides that, we only have to manage only one compiler which
+makes thing easier.
+
+#### For production mode
+
+Becase babel cannot do type checking. So we still have to use `tsc` to compile our Typescript code into Javascript. So, I decide to only use it when it comes to production and before commiting our changes as well. The reason for doing it because I don't want bad code sneaky into my repo and I've to create a new commit to fix that which cause extra work.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+1. Make sure you have nodejs installed in your local machine. If you don't have it yet, please install it. You could type `node -v` in your terminal to check whether nodejs is installed or not.
+2. Clone the repo
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Install neccessary dependencies
+  ```sh
+  yarn install // OR
+  npm install
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -153,15 +153,14 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+You can start the project under development mode by the command `yarn dev`. Please check out `package.json` file for more commands.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
+<!--
 ## Roadmap
 
 - [x] Add Changelog
@@ -175,10 +174,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+-->
 
 
 
 <!-- CONTRIBUTING -->
+<!--
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -193,7 +194,7 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+-->
 
 
 <!-- LICENSE -->
@@ -208,9 +209,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Tu Le Thanh - [Tu Le Thanh](https://www.facebook.com/le.thanhtu.129) - lethanhtu1551998@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/lethanhtupk/react-application-boilerplate](https://github.com/lethanhtupk/react-application-boilerplate)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -219,6 +220,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+<!--
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Choose an Open Source License](https://choosealicense.com)
@@ -231,6 +233,8 @@ Use this space to list resources you find helpful and would like to give credit 
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+-->
 
 
 
@@ -249,4 +253,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-1
+
