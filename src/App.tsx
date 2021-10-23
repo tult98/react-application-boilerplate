@@ -1,9 +1,9 @@
 import React from 'react'
 
-const App = () => {
+const App = ({ title }: { title: string }) => {
   return (
     <div>
-      <h1>React application boilerplate</h1>
+      <h1>{title}</h1>
       <p>This is an application setup from scratch with full of features like</p>
       <ul>
         <li>Webpack as module bundler</li>
