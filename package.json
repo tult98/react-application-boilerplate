@@ -54,6 +54,9 @@
     }
   },
   "lint-staged": {
-    ".js,.jsx,.ts,.tsx": "yarn lint-fix && yarn ts-check"
+    "*.{ts,tsx,js,jsx}": [
+      "yarn lint-fix",
+      "bash -c 'yarn ts-check'"
+    ]
   }
 }
